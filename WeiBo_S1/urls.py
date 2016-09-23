@@ -22,6 +22,5 @@ urlpatterns = [
     url(r'^login/', views.login),
     url(r'^$', views.index),
     # 用户个人主页，接受一个UID
-
     url(r'^u/[\w+]', views.userprofile)
 ]

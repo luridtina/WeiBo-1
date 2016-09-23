@@ -80,14 +80,10 @@ WSGI_APPLICATION = 'WeiBo_S1.wsgi.application'
 #     }
 # }
 
-DATABASES = {           # 用mysql连接数据库，提前要建好数据库
+DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_weibodb',  # 数据库名
-        'USER': 'root',
-        'PASSWORD': '123456',  # 密码
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
