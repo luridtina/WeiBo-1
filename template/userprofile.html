@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ UserName }}</title>
+    <title>{{ UserData.UserName }}</title>
     <link rel="stylesheet" href="/statics/plugins/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/statics/css/userprofile.css">
 </head>
-<body style="background-color: #333333">
+<body style="background-color: #5893bf">
 <header>
     <nav id="headers" class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
@@ -16,31 +17,328 @@
     </nav>
 </header>
 
-
 <div class="container">
-    <div class="col-sm-12" style="background-color: #2a6496;height: 300px;">
+
+    <div id="head">
+
+        <div id="HeadImg" class="container">
+            <img src="{{ UserData.HeadImg }}" class="img-circle center-block">
+        </div>
+
+        <div id="UserName" class="col-sm-12 text-center">
+            {{ UserData.UserName }}
+        </div>
+
+        <div id="Brief" class="col-sm-12 text-center">
+            <p>{{ UserData.Brief }}</p>
+        </div>
+
+        <div id="Menu" class="col-sm-12 text-center">
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-ok"></span>已关注<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">取消关注</a></li>
+                    <li><a href="#">设置分组</a></li>
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">私信</button>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="glyphicon glyphicon-align-justify"></span>
+                </button>
+
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">设置备注</a></li>
+                    <li><a href="#">悄悄关注</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">加入黑名单</a></li>
+                </ul>
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="col-sm-12" style="background-color: #ffffff;height: 40px;">
+    <div id="Menu2" class="text-center" style="background-color: #ffffff;height: 40px;">
         <a href="#">主页</a>
         <a href="#">相册</a>
-        <a href="#">管理中心</a>
     </div>
 
-    <div>
-        <div class="col-sm-4" style="background-color: rebeccapurple;height: 100px;">
-            asd
+
+    <div id="left" class="col-sm-4">
+
+        <div id="LeftFollow">
+
+            <ul>
+                <li>
+                    <ul>
+                        <li class="number">3000</li>
+                        <li class="title">关注</li>
+                    </ul>
+                </li>
+
+                <li class="l">|</li>
+
+                <li>
+                    <ul>
+                        <li class="number">3000</li>
+                        <li class="title">粉丝</li>
+                    </ul>
+                </li>
+                <li class="l">|</li>
+                <li>
+                    <ul>
+                        <li class="number">3000</li>
+                        <li class="title">微博</li>
+                    </ul>
+                </li>
+            </ul>
+
         </div>
 
-        <div class="col-sm-8" style="background-color: darkgreen;height: 100px;">
-            asd
+        <div id="LeftInfo">
+            <div class="container" style="width: 90%;">
+                <div>
+                    <table>
+                        <tr>
+                            <td><i class="glyphicon glyphicon-user"></i></td>
+                            <td><span class="label label-warning">Lv.25</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="border-bottom: 1px solid #f2f2f5"></div>
+                <div>
+                    <table>
+                        <tr>
+                            <td><i class="glyphicon glyphicon-bookmark"></i></td>
+                            <td>中国 北京</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="border-bottom: 1px solid #f2f2f5"></div>
+                <div>
+                    <table>
+                        <tr>
+                            <td><i class="glyphicon glyphicon-book"></i></td>
+                            <td>简介： 每天推荐国内外最新优秀网页设计案例，顺手介绍新鲜互联网产品 :)</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="border-bottom: 1px solid #f2f2f5"></div>
+                <div>
+                    <table>
+                        <tr>
+                            <td><i class="glyphicon glyphicon-link"></i></td>
+                            <td>个性域名： <a href="#">startupthemes</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="border-bottom: 1px solid #f2f2f5"></div>
+                <div>
+                    <table>
+                        <tr>
+                            <td><i class="glyphicon glyphicon-pencil"></i></td>
+                            <td>标签
+                                <a href="#">产品设计</a>
+                                <a href="#">产品运营</a>
+                                <a href="#">产品经理</a>
+                                <a href="#">企业建站</a>
+                                <a href="#">UI设计师</a>
+                                <a href="#">初创产品官网</a>
+                                <a href="#">官网建设</a>
+                                <a href="#">UI设计</a>
+                                <a href="#">官网设计</a>
+                                <a href="#">网页设计</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div style="border-bottom: 1px solid #d9d9d9"></div>
+            <div class="container" style="width: 100px;margin-top: 10px">
+                <a href="#">查看更多</a>
+            </div>
         </div>
+
+        <div id="LeftRelation">
+            <div>
+                微关系
+            </div>
+            <div style="border-bottom: 1px solid #f2f2f5"></div>
+            <div class="container" style="width: 90%;">
+                <p>共同关注</p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>
+                            <img style="width: 50px;height: 50px;" src="/statics/images/2.jpg" class="img-circle">
+                        </th>
+                        <th>
+                            <img style="width: 50px;height: 50px;" src="/statics/images/2.jpg" class="img-circle">
+                        </th>
+                        <th>
+                            <img style="width: 50px;height: 50px;" src="/statics/images/2.jpg" class="img-circle">
+                        </th>
+                        <th>
+                            <img style="width: 50px;height: 50px;" src="/statics/images/2.jpg" class="img-circle">
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            Hello
+                        </td>
+                        <td>
+                            Hello
+                        </td>
+                        <td>
+                            Hello
+                        </td>
+                        <td>
+                            Hello
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div style="border-bottom: 1px solid #f2f2f5"></div>
+                <p>我关注的人也关注他</p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>
+                            <img style="width: 50px;height: 50px;" src="{{ UserData.HeadImg }}" class="img-circle">
+                        </th>
+                        <th>
+                            <img style="width: 50px;height: 50px;" src="{{ UserData.HeadImg }}" class="img-circle">
+                        </th>
+                        <th>
+                            <img style="width: 50px;height: 50px;" src="{{ UserData.HeadImg }}" class="img-circle">
+                        </th>
+                        <th>
+                            <img style="width: 50px;height: 50px;" src="{{ UserData.HeadImg }}" class="img-circle">
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            World
+                        </td>
+                        <td>
+                            World
+                        </td>
+                        <td>
+                            World
+                        </td>
+                        <td>
+                            World
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="border-bottom: 1px solid #f2f2f5"></div>
+            <div class="container" style="width: 100px;margin-top: 10px">
+                <a href="#">查看更多</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="right" class="col-sm-8">
+
+        <div style="width: 3%"></div>
+        <div id="content" style="width:97%;float: right">
+
+            <div id="TopMenu">
+                <div><a href="#">全部</a></div>
+                <div><a href="#"><i class="glyphicon glyphicon-signal"></i>热门</a></div>
+
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown">
+                        更多
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">原创</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">图片</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">视频</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">音乐</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">文章</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">标签</a></li>
+                    </ul>
+                </div>
+                <div class="input-group" style="width: 200px;float: right">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search">
+
+                            </span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+
+            <div id="Bowen">
+                <div class="container" style="width: 90%">
+                    <div class="col-md-1">
+                        <img style="width: 50px;height: 50px" src="/statics/images/1.jpg"
+                             class="img-circle center-block">
+                    </div>
+                    <div class="col-md-11">
+                        <p>
+                            <a href="#"><b>HelloWorld</b></a>
+                        </p>
+                        <p>
+                            <a href="#">9月21日 21:21</a>来自<a href="#">微博 weibo.com</a>
+                        </p>
+                        <p>
+                            Convey meaning through color with a handful of emphasis utility classes. These may also be
+                            applied to links and will darken on hover just like our default link styles.
+                        </p>
+                        <p>
+                            <img src="http://127.0.0.1/statics/images/2.jpg">
+                        </p>
+                    </div>
+                </div>
+                <div style="border-bottom: 1px solid #f2f2f5 "></div>
+                <p>
+                    <a href="#" class="glyphicon glyphicon-star-empty"> 收藏</a>
+                    <span>|</span>
+                    <a href="#" class="glyphicon glyphicon-retweet"> 转发</a>
+                    <span>|</span>
+                    <a href="#" class="glyphicon glyphicon-comment"> 评论</a>
+                    <span>|</span>
+                    <a href="#" class="glyphicon glyphicon-thumbs-up"></a>
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+<div id="Footer">
+
+    <div style="background-color: #fff;height: 161px">
+
+    </div>
+    <div style="background-color: #f2f2f5;height: 137px">
 
     </div>
 </div>
-
-
-
 </body>
 <script src="/statics/plugins/jquery-3.1.0.js"></script>
 <script src="/statics/plugins/bootstrap/dist/js/bootstrap.js"></script>

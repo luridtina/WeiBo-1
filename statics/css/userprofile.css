@@ -1,0 +1,102 @@
+#head {
+    background-color: #a09e9e;
+    height: 300px;
+}
+
+#HeadImg > img {
+    width: 100px;
+    height: 100px;
+    margin-top: 48px;
+}
+
+#UserName {
+    width: 100%;
+    font-size: 22px;
+    display: inline;
+    font-weight: normal;
+}
+
+#Menu2 {
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+#Menu2 > a {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 14px;
+}
+
+#left, #right {
+    padding: 0;
+}
+
+#left > div {
+    margin-bottom: 20px;
+}
+
+#content > div {
+    margin-bottom: 20px;
+}
+
+#LeftFollow {
+    background-color: #fff;
+    height: 60px;
+}
+
+#LeftFollow > ul > li {
+    float: left;
+    list-style: none;
+}
+
+#LeftFollow > ul > .l {
+    font-size: 30px;
+}
+
+#LeftFollow > ul > li > ul > li {
+    list-style: none;
+}
+
+#LeftFollow > ul > li > ul > .number {
+    font-size: 18px;
+}
+
+#LeftFollow > ul > li > ul > .title {
+    color: #808080;
+    font-size: 14px;
+}
+
+#LeftInfo {
+    background-color: #fff;
+    height: 255px;
+}
+
+#LeftInfo > div > div {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#LeftRelation {
+    background-color: #fff;
+    height: 255px;
+}
+
+#TopMenu {
+    background-color: #f2f2f5;
+    height: 38px;
+}
+
+#TopMenu > div {
+    float: left;
+    margin-right: 20px;
+}
+
+#content > div > p > a {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#Bowen {
+    background-color: #fff;
+    height: 270px;
+}

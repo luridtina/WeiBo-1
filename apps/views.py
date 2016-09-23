@@ -18,5 +18,10 @@ def userprofile(request):
     # Name = User.objects.filter(username=CurrentUserName)
     # if len(Name) != 1:
     #     return HttpResponse('404')
+    UserData = {
+        'UserName': 'HelloWorld',
+        'Brief': '我是签名我是签名我是签名我是签名我是签名我是签名',
+        'HeadImg': '/statics/images/1.jpg',
+    }
 
-    return render(request, 'userprofile.html', {'UserName': CurrentUserName})
+    return render(request, 'userprofile.html', {'UserData': UserData})
