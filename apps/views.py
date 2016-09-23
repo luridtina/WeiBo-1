@@ -12,12 +12,10 @@ def index(request):
 def userprofile(request):
     # 获取用户传入过来的用户名
     CurrentUserName = request.path.split('/')[2]
+    Code = len(User.objects.filter(username=CurrentUserName))
 
-    # print(models.UserProfile.objects.filter(user=CurrentUserName))
-
-    # Name = User.objects.filter(username=CurrentUserName)
-    # if len(Name) != 1:
-    #     return HttpResponse('404')
+    if Code != 1:
+        return HttpResponse('404')
     UserData = {
         'UserName': 'HelloWorld',
         'Brief': '我是签名我是签名我是签名我是签名我是签名我是签名',
