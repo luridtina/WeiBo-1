@@ -3,7 +3,7 @@
 
 /* 总容器 container */
 #container{
-	width:765px;
+	width:1100px;
 	height:auto;
 	margin:0px auto;
 }
@@ -82,11 +82,11 @@
 			}
 	/* top部分的文字导航 */
 	#topWordMenu{
-		width:330px;
+		width:360px;
 		height:30px;
 		position:absolute;
 		top:33px;
-		left:430px;
+		left:700px;
 	}
 		/* top部分的ul */
 		#topWordMenu ul{
@@ -226,7 +226,7 @@
 						  /* 插入视频 */
 					  #mainBannerTopIssueInsert4{
 	                       height:15px;
-	                       width:49px;
+	                       width:55px;
 						   float:left;
 						   line-height:15px;
 						    margin-top:5px;
@@ -246,6 +246,8 @@
 							  margin-left:5px;
 							  margin-top:5px;
 							  float:left;
+							  z-index:8888;
+
 						  }
 					  
 				 /*确认发布*/	 
@@ -262,6 +264,11 @@
 						  width:81px;
 						  height:30px;
 					  }
+	    #mainleft1{
+			display: inline;
+			left: 90px;
+			position:absolute;
+		}
 		#mainBannerTitle{
 			width:562px;
 			padding:0px;
@@ -466,13 +473,13 @@
 				}
 				/* 右侧第一行标题 mainRightFirstLineWord2 DIV*/
 				#mainRightPostionFirstLineWord2{
-	clear:both;
-	width:180px;
-	height:40px;
-	border:0px;
-	padding:0px;
-	margin-top:10px;
-				}				
+					clear:both;
+					width:180px;
+					height:40px;
+					border:0px;
+					padding:0px;
+					margin-top:10px;
+				}
 				/*  mainRightFirstLineWord2 ul格式 */
 				#mainRightPostionFirstLineWord2 ul{
 					list-style:none;
@@ -481,8 +488,8 @@
 				}
 				/*  mainRightFirstLineWord2 li格式 */
 				#mainRightPostionFirstLineWord2 ul li{
-	margin:0px 15px;
-	float:left;
+					margin:0px 15px;
+					float:left;
 				}					
 			/* 右侧内部第二行容器 mainRightPostionSecondLine DIV */ 
 			#mainRightPostionSecondLine{
@@ -490,7 +497,7 @@
 				padding:0px;
 				margin:0px;
 				border:0px;
-				height:184px;
+				height:250px;
 				background-color:#E9F4FA;				
 				border-bottom:1px solid #A6D3E3;
 			}
@@ -549,6 +556,10 @@
 					#textfield1{
 						width:120px;
 						height:20px;
+						padding-right: 120px;
+						position: absolute;
+						left: 145px;
+						top: 30px;
 					}
 					/* 右侧第四行 ul 样式 */
 					#ul2{
@@ -563,7 +574,7 @@
 				padding:0px;
 				margin:0px;
 				border:0px;
-				height:44px;
+				height:90px;
 				background-color:#E9F4FA;
 				border-bottom:1px solid #A6D3E3;					
 			}
@@ -578,7 +589,7 @@
 				padding:0px;
 				margin:0px;
 				border:0px;
-				height:130px;
+				height:440px;
 				background-color:#E9F4FA;
 				border-bottom:1px solid #A6D3E3;					
 			}

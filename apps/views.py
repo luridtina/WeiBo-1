@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, render_to_response, HttpResponse
 from django.contrib.auth.models import User
 from apps import models
 
@@ -7,6 +7,10 @@ from apps import models
 
 def index(request):
     return render(request, 'index.html')
+
+
+def login(request):
+    return render(request, 'login.html')
 
 
 def userprofile(request):
@@ -19,4 +23,6 @@ def userprofile(request):
     # if len(Name) != 1:
     #     return HttpResponse('404')
 
-    return render(request, 'userprofile.html', {'UserName': CurrentUserName})
+    return render(request, 'home.html', {'UserName': CurrentUserName})
+
+

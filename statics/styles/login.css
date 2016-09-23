@@ -42,7 +42,7 @@
 		height:30px;
 		position:absolute;
 		top:33px;
-		left:450px;
+		left:700px;
 	}
 		/* top部分的ul */
 		#topWordMenu ul{
@@ -89,7 +89,7 @@
 			height:32px;
 			margin:10px 0px;
 			line-height:32px;
-			font-size:20px;
+			font-size:12px;
 			border:1px #0CF solid;
 		}
 		/* left部分表格大小 */
@@ -157,7 +157,7 @@
 	
 	/* footer部分*/
 	#footer{
-		width:765px;
+		width:100%;
 		height:50px;
 		border:1px solid #ccc;
 	}
