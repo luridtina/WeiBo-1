@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, render_to_response, HttpResponse
 from django.contrib.auth.models import User
 from apps import models
 
@@ -7,6 +7,10 @@ from apps import models
 
 def index(request):
     return render(request, 'index.html')
+
+
+def login(request):
+    return render(request, 'login.html')
 
 
 def userprofile(request):
@@ -22,4 +26,10 @@ def userprofile(request):
         'HeadImg': '/statics/images/1.jpg',
     }
 
+<<<<<<< HEAD
+    return render(request, 'home.html', {'UserName': CurrentUserName})
+
+
+=======
     return render(request, 'userprofile.html', {'UserData': UserData})
+>>>>>>> 1df70817087e84b9e325e31d6951d905d5e9a7dd
