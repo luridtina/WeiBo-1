@@ -2,17 +2,18 @@ from django.shortcuts import render, render_to_response, HttpResponse
 from django.contrib.auth.models import User
 from apps import models
 
-
 # Create your views here.
 
+# 首页
 def index(request):
+    
     return render(request, 'index.html')
 
-
+# 登陆
 def login(request):
-    return render(request, 'login.html')
+    return HttpResponse(status=403)
 
-
+# 个人主页
 def userprofile(request):
     # 获取用户传入过来的用户名
     CurrentUserName = request.path.split('/')[2]
