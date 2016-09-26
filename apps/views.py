@@ -16,19 +16,23 @@ def login(request):
 def userprofile(request):
     # 获取用户传入过来的用户名
     CurrentUserName = request.path.split('/')[2]
-    Code = len(User.objects.filter(username=CurrentUserName))
-    # 没有获取到此用户返回404
-    if Code != 1:
-        return HttpResponse('404')
-    # 获取前端所需要的用户信息
-    UserProfile = list(
-        models.UserProfile.objects.filter(user__username='ansheng').values('name', 'sex', 'tags', 'head_img',
+    try:
+        # 用户信息
+        UserInfo = models.UserProfile.objects.get(user__username=CurrentUserName)
+        UserData = {
+            'name': UserInfo.name,
+            'sex': UserInfo.sex,
+            'tags': [],
+            'head_img': '/' + str(UserInfo.head_img),
+            'brief': UserInfo.brief,
+            'follow_list': len(UserInfo.follow_list.all()),
+            'my_followers': len(UserInfo.my_followers.all())
+        }
 
-                                                                           'follow_list'))[0]
-    UserData = {
-        'UserName': 'HelloWorld',
-        'Brief': '我是签名我是签名我是签名我是签名我是签名我是签名',
-        'HeadImg': '/statics/images/1.jpg',
-    }
+        for n in UserInfo.tags.all():
+            UserData['tags'].append(str(n))
+
+    except Exception as e:
+        return HttpResponse('404')
 
     return render(request, 'userprofile.html', {'UserData': UserData})

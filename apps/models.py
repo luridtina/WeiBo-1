@@ -72,9 +72,10 @@ class UserProfile(models.Model):
     '''用户信息'''
 
     user = models.OneToOneField(User)
-
     name = models.CharField(max_length=64)
+
     brief = models.CharField(max_length=140, blank=True, null=True)
+
     sex_type = ((1, 'Male'), (0, 'Female'))
     sex = models.IntegerField(choices=sex_type, default=1)
     age = models.PositiveSmallIntegerField(blank=True, null=True)

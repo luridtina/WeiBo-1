@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ UserData.UserName }}</title>
+    <title>{{ UserData.name }}</title>
     <link rel="stylesheet" href="/statics/plugins/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/statics/plugins/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/statics/css/userprofile.css">
 </head>
 <body style="background-color: #5893bf">
@@ -22,11 +23,18 @@
     <div id="head">
 
         <div id="HeadImg" class="container">
-            <img src="{{ UserData.HeadImg }}" class="img-circle center-block">
+            <img src="{{ UserData.head_img }}" class="img-circle center-block">
         </div>
 
         <div id="UserName" class="col-sm-12 text-center">
-            {{ UserData.UserName }}
+            {{ UserData.name }}
+
+            {% if UserData.sex == 0 %}
+                <i class="fa fa-female" aria-hidden="true"></i>
+            {% else %}
+                <i class="fa fa-male" aria-hidden="true"></i>
+            {% endif %}
+
         </div>
 
         <div id="Brief" class="col-sm-12 text-center">
@@ -79,7 +87,7 @@
             <ul>
                 <li>
                     <ul>
-                        <li class="number">3000</li>
+                        <li class="number">{{ UserData.follow_list }}</li>
                         <li class="title">关注</li>
                     </ul>
                 </li>
@@ -88,7 +96,7 @@
 
                 <li>
                     <ul>
-                        <li class="number">3000</li>
+                        <li class="number">{{ UserData.my_followers }}</li>
                         <li class="title">粉丝</li>
                     </ul>
                 </li>
@@ -127,7 +135,7 @@
                     <table>
                         <tr>
                             <td><i class="glyphicon glyphicon-book"></i></td>
-                            <td>简介： 每天推荐国内外最新优秀网页设计案例，顺手介绍新鲜互联网产品 :)</td>
+                            <td>{{ UserData.brief }}</td>
                         </tr>
                     </table>
                 </div>
@@ -145,17 +153,11 @@
                     <table>
                         <tr>
                             <td><i class="glyphicon glyphicon-pencil"></i></td>
-                            <td>标签
-                                <a href="#">产品设计</a>
-                                <a href="#">产品运营</a>
-                                <a href="#">产品经理</a>
-                                <a href="#">企业建站</a>
-                                <a href="#">UI设计师</a>
-                                <a href="#">初创产品官网</a>
-                                <a href="#">官网建设</a>
-                                <a href="#">UI设计</a>
-                                <a href="#">官网设计</a>
-                                <a href="#">网页设计</a>
+                            <td>
+                                {% for tag in UserData.tags %}
+                                    <a href="#">{{ tag }}</a>
+                                {% endfor %}
+                            </td>
                             </td>
                         </tr>
                     </table>
